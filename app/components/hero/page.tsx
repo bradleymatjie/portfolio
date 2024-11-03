@@ -1,20 +1,12 @@
-'use client';
 import bradImage from '../../media/Wave1.svg';
 import stripe from '../../media/dark-grey-strip.svg';
 import brad from '../../media/hero-image.jpeg';
 import Image from 'next/image';
 import './hero.scss';
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function Hero() {
-    const [selectedImage, setSelectedImage] = useState(1);
-
-    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSelectedImage(Number(e.target.value));
-    };
     
-    console.log(selectedImage);
     return (
     <section className="hero" style={{backgroundImage: `url(${bradImage.src})`,backgroundRepeat: 'no-repeat', backgroundSize: '100%', backgroundPosition: 'center top'}}>
         <Image src={stripe} alt="stripe" style={{position: 'absolute', right: 0, bottom: '200px', transform: 'rotate(180deg)', width: '50px', height: '600px'}} />
