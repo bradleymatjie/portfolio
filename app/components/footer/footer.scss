@@ -121,10 +121,16 @@ footer {
 }
 
 .menu-item.active {
-    color: #f5f5f5;
-    background-color: #252525;
+    color: #252525;
+    background-color: #F0F0F3;
+    box-shadow: inset -10px -10px 10px #FFFFFF 70%, inset 10px 10px 10px #AEAEC0 20%;
     height: 100%;
     width: 50px;
+    transition: all 0.5s ease;
+
+    & svg {
+        box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px #AEAEC0 25%;
+    }
 }
 
 
