@@ -20,7 +20,7 @@
             justify-content: flex-start;
             padding-top: 80px;
             width: 90%;
-            font-size: 1em;
+            font-size: 1.5em;
 
         }
 
@@ -37,8 +37,8 @@
         & h1 {
             font-size: 2em;
 
-            @media screen and (max-width: 1024px) {
-                // font-size: 24px;
+            @media screen and (max-width: 600px) {
+                font-size: 1.4em;
                 text-align: center;
             }
         }
@@ -88,12 +88,7 @@
         align-items: center;
         perspective: 1000px;
 
-        @media screen and (max-width: 900px) {
-            // height: 500px;
-            justify-content: flex-start !important;
-            border: 1px solid red;
-            transform: scale(0.7);
-            width: 100%;
+        @media screen and (max-width: 1440px) {
             display: none;
         }
         
@@ -184,4 +179,14 @@
     padding: 10px;
     border-radius: 10px;
     color: white;
+}
+
+
+.hero {
+    
+    @media screen and (max-width: 900px) {
+        border: 1px solid red;
+        background-position: center !important;
+        background-size: 250% !important;
+    }
 }
