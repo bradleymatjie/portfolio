@@ -17,30 +17,30 @@
         justify-content: center;
 
         @media screen and (max-width: 900px) {
-            justify-content: flex-start;
-            padding-top: 80px;
-            width: 90%;
+            width: 100%;
             font-size: 1.5em;
 
         }
 
         & p {
-            // font-size: 1.5em;
-            // border: 1px solid red;
 
             @media screen and (max-width: 900px) {
                 text-align: center !important;
-                // border: 1px solid red;
             }
         }
 
         & h1 {
             font-size: 2em;
+            
+            @media screen and (max-width: 400px) {
+                font-size: 1.2em;
+            }
 
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 900px) {
                 font-size: 1.4em;
                 text-align: center;
             }
+
         }
 
         & .hero-text-buttons {
@@ -182,11 +182,10 @@
 }
 
 
-.hero {
+.hero  > img {
     
     @media screen and (max-width: 900px) {
-        border: 1px solid red;
-        background-position: center !important;
-        background-size: 250% !important;
+        
+        display: none;
     }
 }
