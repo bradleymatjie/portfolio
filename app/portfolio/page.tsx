@@ -1,5 +1,7 @@
+import Construction from "../components/construction/page";
+
 export default function Portfolio() {
-    return (
-        <div>Portfolio</div>
+        return (
+            <Construction />
     )
 }

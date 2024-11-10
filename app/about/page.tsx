@@ -1,5 +1,7 @@
+import Construction from '../components/construction/page';
+
 export default function About() {
     return (
-        <div>About</div>
+        <Construction />
     )
 }
