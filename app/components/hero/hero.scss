@@ -16,13 +16,40 @@
         flex-direction: column;
         justify-content: center;
 
+        @media screen and (max-width: 900px) {
+            justify-content: flex-start;
+            padding-top: 80px;
+            width: 90%;
+            font-size: 1em;
+
+        }
+
+        & p {
+            // font-size: 1.5em;
+            // border: 1px solid red;
+
+            @media screen and (max-width: 900px) {
+                text-align: center !important;
+                // border: 1px solid red;
+            }
+        }
+
         & h1 {
             font-size: 2em;
+
+            @media screen and (max-width: 1024px) {
+                // font-size: 24px;
+                text-align: center;
+            }
         }
 
         & .hero-text-buttons {
             display: flex;
             gap: 10px;
+
+            @media screen and (max-width: 900px) {
+                justify-content: center;
+            }
         }
 
         & .hire-me {
@@ -53,8 +80,6 @@
 
     &-image {
         height: 700px;
-        // border: 1px solid red;
-        // border: 1px solid red;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -62,6 +87,15 @@
         justify-content: center;
         align-items: center;
         perspective: 1000px;
+
+        @media screen and (max-width: 900px) {
+            // height: 500px;
+            justify-content: flex-start !important;
+            border: 1px solid red;
+            transform: scale(0.7);
+            width: 100%;
+            display: none;
+        }
         
 
         &-1 {

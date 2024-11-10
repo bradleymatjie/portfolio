@@ -17,6 +17,7 @@ footer {
         background-color: #252525;
         border-radius: 10px;
         height: 60%;
+        min-width: 250px;
         width: 30%;
         display: flex;
         justify-content: space-around;
@@ -26,6 +27,8 @@ footer {
         transform: translateZ(-100px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
+
+      
 
 
         &.open {
