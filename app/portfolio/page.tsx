@@ -99,7 +99,7 @@ function Portfolio() {
           </button>
         </div>
         {data.reverse().map((project) => (
-          <AnimatePresence>
+          <AnimatePresence key={project.id}>
           <motion.div
             className="card"
             initial={{ opacity: 0 }}
