@@ -5,6 +5,7 @@ import { projects } from "./data";
 
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
 
 type Card = {
   id:number,
@@ -24,12 +25,12 @@ function Portfolio() {
   const [data, setData] = useState<Card[]>([]);
 
   const tab = searchParams.get("tab");
-
+  
   useEffect(() => {
     if (!tab) {
-      if (typeof window !== "undefined") {
-        router.replace("/portfolio?tab=Portfolio"); 
-      }
+      setTimeout(() => {
+        router.replace("/portfolio?tab=Portfolio");
+      }, 0);
       return;
     }
     setData(projects.filter((item) => item.type === tab));
@@ -98,11 +99,15 @@ function Portfolio() {
           </button>
         </div>
         {data.reverse().map((project) => (
-          <div
+          <AnimatePresence>
+          <motion.div
             className="card"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
             key={project.id}
-            // style={{ backgroundImage: `url(${project.image})` }}
-          >
+            
+            >
             <img src={project.image} alt={project.name} />
             <h2 className="text-2xl font-bold">{project.name}</h2>
             <span>{project.position}</span>
@@ -111,20 +116,20 @@ function Portfolio() {
               <button className="mt-6 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-md" onClick={() => window.open(project.url, '_blank')}>
                 {tab == "Portfolio" && 
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-fullscreen"
-                  viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-fullscreen"
+                viewBox="0 0 16 16"
                 >
                   <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5" />
                 </svg>}
                 {tab == "work" && project.date} 
               </button>
-              {/* <span className="mt-6 px-6 py-3 text-dark rounded-md"></span> */}
             </div>
-          </div>
+          </motion.div>
+        </AnimatePresence>
         ))}
       </div>
     </section>
