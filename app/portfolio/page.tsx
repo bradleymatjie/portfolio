@@ -1,27 +1,39 @@
 "use client";
 import "./portfolio.scss";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { projects } from "./data";
 
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
-export default function Portfolio() {
+type Card = {
+  id:number,
+  name:string,
+  position?:string,
+  date?:string,
+  url: string,
+  description: string,
+  code: string,
+  image: string,
+  type:string,
+}
+
+function Portfolio() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<Card[]>([]);
 
   const tab = searchParams.get("tab");
 
   useEffect(() => {
     if (!tab) {
-      router.push('/portfolio?tab=Portfolio')
+      if (typeof window !== "undefined") {
+        router.replace("/portfolio?tab=Portfolio"); 
+      }
+      return;
     }
-    const res = projects.filter(item => item.type == tab);
-
-    setData(res)
-    console.log({res, tab})
-  }, [tab])
+    setData(projects.filter((item) => item.type === tab));
+  }, [tab, router]);
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -42,7 +54,7 @@ export default function Portfolio() {
       <div
         className="portfolio-container"
       >
-        <select name="select-page" id="select-page" value={tab??"Portfolio"} onChange={(event:any) => router.push(`/portfolio?tab=${event.target.value}`)}>
+        <select name="select-page" id="select-page" value={tab??"Portfolio"} onChange={(event) => router.push(`/portfolio?tab=${event.target.value}`)}>
           <option value="Portfolio">Portfolio</option>
           <option value="work">Work Experience</option>
           <option value="education">Education</option>
@@ -117,4 +129,12 @@ export default function Portfolio() {
       </div>
     </section>
   );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>loading</div>}>
+      <Portfolio />
+    </Suspense>
+  )
 }

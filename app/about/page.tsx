@@ -47,7 +47,7 @@ export default function About() {
               scalable solutions. My expertise extends to API integrations,
               creating dynamic, responsive interfaces, and optimizing
               performance for web applications. What sets me apart is my
-              constant drive to learn and grow. Whether it's diving into new
+              constant drive to learn and grow. Whether it is diving into new
               frameworks like React Native or exploring Flutter, I’m always
               ready to expand my skill set and push boundaries. Recently, I’ve
               been refining my skills through Framer, WordPress, and even
