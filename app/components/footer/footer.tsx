@@ -13,13 +13,22 @@ export default function Footer() {
                 <div className={`menu-items`}>
                     <div className={`menu-item ${pathname === '/' ? 'active' : ''}`}>
                         <Link href="/">{pathname === '/' ? <HomeIconActive />:<HomeIcon />}
-                            Home
                         </Link>
+                        {pathname === '/' && <span>Home</span>}
                     </div>
-                    <div className={`menu-item ${pathname === '/about' ? 'active' : ''}`}><Link href="/about">{pathname === '/about' ? <AboutIconActive />:<AboutIcon />}</Link></div>
-                    <div className={`menu-item ${pathname === '/portfolio' ? 'active' : ''}`}><Link href="/portfolio">{pathname === '/portfolio' ? <PortfolioIconActive />:<PortfolioIcon />}</Link></div>
+                    <div className={`menu-item ${pathname === '/about' ? 'active' : ''}`}>
+                    <Link href="/about">{pathname === '/about' ? <AboutIconActive />:<AboutIcon />}</Link>
+                     {pathname === '/about' && <span>About</span>}
+                    </div>
+                    <div className={`menu-item ${pathname === '/portfolio' ? 'active' : ''}`}>
+                    <Link href="/portfolio">{pathname === '/portfolio' ? <PortfolioIconActive />:<PortfolioIcon />}</Link>
+                     {pathname === '/portfolio' && <span>Work</span>}
+                    </div>
                     {/* <div className={`menu-item ${pathname === '/education' ? 'active' : ''}`}><Link href="/education">{pathname === '/education' ? <EducationIconActive /> : <EducationIcon />}</Link></div> */}
-                    <div className={`menu-item ${pathname === '/projects' ? 'active' : ''}`}><Link href="/projects">{pathname === '/projects' ? <ContactIconActive /> : <ContactIcon />}</Link></div>
+                    <div className={`menu-item ${pathname === '/projects' ? 'active' : ''}`}>
+                    <Link href="/projects">{pathname === '/projects' ? <ContactIconActive /> : <ContactIcon />}</Link>
+                        {pathname === '/projects' && <span>Projects</span>}
+                    </div>
                 </div>
         </footer>
     )
