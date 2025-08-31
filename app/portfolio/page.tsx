@@ -58,7 +58,7 @@ export default function WorkExperience() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [selectedExperience, setSelectedExperience] = useState<Experience|null>(null);
 
-  const handleCardClick = (experience:any) => {
+  const handleCardClick = (experience:Experience) => {
     setSelectedExperience(experience);
     setIsDrawerOpen(true);
   };
@@ -128,7 +128,7 @@ export default function WorkExperience() {
           {selectedExperience && (
             <>
               <DrawerHeader>
-                <DrawerTitle>{selectedExperience?.title!}</DrawerTitle>
+                <DrawerTitle>{selectedExperience.title}</DrawerTitle>
                 <DrawerDescription>{selectedExperience.subtitle}</DrawerDescription>
               </DrawerHeader>
               <div className="p-6">

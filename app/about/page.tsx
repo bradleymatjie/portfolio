@@ -47,7 +47,7 @@ export default function About() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              I'm Bradley, a dedicated freelance Full-Stack Developer with a passion for building seamless, user-friendly web and mobile applications. With expertise in <strong>React.js</strong>, <strong>Next.js</strong>, <strong>React Native</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>, I create tailored solutions that drive engagement and performance.
+              I am Bradley, a dedicated freelance Full-Stack Developer with a passion for building seamless, user-friendly web and mobile applications. With expertise in <strong>React.js</strong>, <strong>Next.js</strong>, <strong>React Native</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>, I create tailored solutions that drive engagement and performance.
             </p>
             <p className="text-muted-foreground mt-4 leading-relaxed">
               Currently, I’m an Intermediate Full-Stack Developer at Consnet, working on the EPSON project, where I handle complex API integrations, responsive UI design, and backend logic to deliver high-quality solutions. My experience with platforms like Social Banc and Thooto.com has honed my ability to build scalable, impactful applications for diverse clients.

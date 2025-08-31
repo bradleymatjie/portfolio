@@ -11,7 +11,11 @@ export default function Footer() {
     return (
         <footer>
                 <div className={`menu-items`}>
-                    <div className={`menu-item ${pathname === '/' ? 'active' : ''}`}><Link href="/">{pathname === '/' ? <HomeIconActive />:<HomeIcon />}</Link></div>
+                    <div className={`menu-item ${pathname === '/' ? 'active' : ''}`}>
+                        <Link href="/">{pathname === '/' ? <HomeIconActive />:<HomeIcon />}
+                            Home
+                        </Link>
+                    </div>
                     <div className={`menu-item ${pathname === '/about' ? 'active' : ''}`}><Link href="/about">{pathname === '/about' ? <AboutIconActive />:<AboutIcon />}</Link></div>
                     <div className={`menu-item ${pathname === '/portfolio' ? 'active' : ''}`}><Link href="/portfolio">{pathname === '/portfolio' ? <PortfolioIconActive />:<PortfolioIcon />}</Link></div>
                     {/* <div className={`menu-item ${pathname === '/education' ? 'active' : ''}`}><Link href="/education">{pathname === '/education' ? <EducationIconActive /> : <EducationIcon />}</Link></div> */}
