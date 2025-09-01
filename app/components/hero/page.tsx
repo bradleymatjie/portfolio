@@ -16,12 +16,12 @@ export default function Hero() {
             </h1>
             <div className="hero-text-buttons">
                 <Button asChild>
-                    <Link href="emailto:bradleysaint@gmail.com" className='hire-me'>
+                 <a href="mailto:bradleysaint@gmail.com" className="hire-me">
                         Lets talk. <ChevronRightIcon />
-                    </Link>
+                    </a>
                 </Button>
                 <Button variant={"outline"} asChild>
-                    <Link href={'/work'} className='hire-me'>
+                    <Link href={'/portfolio'} className='hire-me'>
                         My work <Monitor/>
                     </Link>
                 </Button>
