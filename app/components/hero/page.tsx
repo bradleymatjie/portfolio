@@ -16,7 +16,7 @@ export default function Hero() {
             </h1>
             <div className="hero-text-buttons">
                 <Button asChild>
-                    <Link href="" className='hire-me'>
+                    <Link href="emailto:bradleysaint@gmail.com" className='hire-me'>
                         Lets talk. <ChevronRightIcon />
                     </Link>
                 </Button>
