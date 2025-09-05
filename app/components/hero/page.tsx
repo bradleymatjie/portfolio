@@ -14,7 +14,7 @@ export default function Hero() {
             <h1 className='scroll-m-20 text-2xl font-semibold tracking-tight'>A human being first,<br/>
                 A Software Engineer at heart.
             </h1>
-            <div className="hero-text-buttons">
+            <div className="hero-text-buttons mt-4">
                 <Button asChild>
                  <a href="mailto:bradleysaint@gmail.com" className="hire-me">
                         Lets talk. <ChevronRightIcon />
@@ -34,14 +34,6 @@ export default function Hero() {
                 <h2 className="hero-image-1-h2-two">Passionate about UI/UX</h2>
                 <h2 className="hero-image-1-h2-three">JavaScript Expert</h2>
                 <h2 className="hero-image-1-h2-four">Strong Problem Solver</h2>
-            {/* 
-            <div className="hero-image-2">
-                
-            </div>
-            <div className="hero-image-3">
-                
-            </div>
-            */}
         </div>
     </section>
     )
