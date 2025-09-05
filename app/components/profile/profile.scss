@@ -1,0 +1,87 @@
+.profile {
+    width: 90%;
+    height: 80dvh;
+    position: relative;
+    background-image: url('/media/brad.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: brightness(70%);
+    border-radius: 20px;
+    margin: 50px auto 20px;
+    padding: 10px;
+    filter: grayscale(100%) brightness(60%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+
+      
+    @media (max-width:640px) {
+        width: 95%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+        
+    
+
+    & > div {
+        width: 50%;
+        height: 100%;
+        padding: 10px;
+        
+     @media (max-width:640px) {
+            width: 100%;
+            flex-direction: column;
+        }
+
+    }
+
+    & > :nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        
+
+        @media (max-width:640px) {
+            justify-content: center;
+            align-items: flex-start;
+            height: 70%;
+        }
+    }
+
+    & > :nth-child(2) {
+          display: flex;
+        justify-content: end;
+        align-items: end;
+        
+        @media (max-width:640px) {
+              height: 30%;
+
+        }
+
+        & .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+            color: #282828;
+            height: 40px;
+            width: 150px;
+            border-radius: 8px;
+            cursor: pointer;
+    
+
+            & .icon {
+                font-size: .5em;
+            }
+
+            
+        @media (max-width:640px) {
+            width: 100%;
+        }
+        }
+    }
+    
+}

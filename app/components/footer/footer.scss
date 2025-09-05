@@ -11,6 +11,32 @@ footer {
     // justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: 2s all;
+
+    &.floating-box {
+        position: fixed;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%) translateY(-20px); // slide a bit upward
+        animation: fadeInFromTop 1s ease forwards;
+
+        @keyframes fadeInFromTop {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        &.sticky {
+            z-index: 1000;
+            top: 20px;
+            bottom: auto;
+        }
+        }
 
     & > .menu-items {
         // border: 1px solid #252525;
