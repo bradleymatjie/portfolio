@@ -22,13 +22,9 @@ export const metadata: Metadata = {
   title: "Bradley Matjie",
   keywords: ["software engineer", "React", "Next.js", "UI/UX", "frontend development"],
   authors: [{ name: "Bradley Matjie" }],
-  icons: [
-    { rel: "icon", url: "/favicon.ico" }, // Default favicon
-    { rel: "shortcut icon", url: "/favicon.ico" },
-    { rel: "apple-touch-icon", url: "/favicon.ico" }, // For iOS devices
-    { rel: "icon", url: "/favicon.ico", sizes: "32x32" },
-    { rel: "icon", url: "/favicon.ico", sizes: "16x16" },
-  ],
+  icons: {
+      icon: "/favicon.ico",
+    },
   openGraph: {
     title: "Bradley Matjie",
     description: "Software Engineer specializing in modern frontend development.",
