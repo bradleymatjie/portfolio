@@ -1,5 +1,4 @@
 
-import Image from 'next/image';
 import './hero.scss';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -11,7 +10,7 @@ export default function Hero() {
     <section className="hero" style={{backgroundImage: `url('/media/Wave1.svg')`,backgroundRepeat: 'no-repeat', backgroundSize: '100%', backgroundPosition: 'center top'}}>
         <div className="hero-text">
             <p>Hi there👋</p>
-            <h1 className='scroll-m-20 text-2xl font-semibold tracking-tight'>A human being first,<br/>
+            <h1 className='scroll-m-20 text-2xl font-semibold tracking-tight p-2'>A human being first,<br/>
                 A Software Engineer at heart.
             </h1>
             <div className="hero-text-buttons mt-4">
