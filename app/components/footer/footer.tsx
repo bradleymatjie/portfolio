@@ -1,32 +1,14 @@
 'use client'
 import "./footer.scss";
-import { AboutIcon, ContactIcon, AboutIconActive, EducationIcon, EducationIconActive, HomeIcon, HomeIconActive, PortfolioIcon, PortfolioIconActive, ContactIconActive } from "@/app/icons/icons";
+import { AboutIcon, ContactIcon, AboutIconActive, HomeIcon, HomeIconActive, PortfolioIcon, PortfolioIconActive, ContactIconActive } from "@/app/icons/icons";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Footer() {
     const pathname = usePathname();
-    console.log('pathname', pathname);
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    if (pathname == '/') {
-      const handleScroll = () => {
-        if (window.scrollY > 100) {
-          setIsSticky(true);
-        } else {
-          setIsSticky(false);
-        }
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
 
     return (
-        <footer className={`floating-box ${isSticky ? "sticky" : ""}`}>
+        <footer className={`floating-box`}>
                 <div className={`menu-items`}>
                     <div className={`menu-item ${pathname === '/' ? 'active' : ''}`}>
                         <Link href="/">{pathname === '/' ? <HomeIconActive />:<HomeIcon />}
