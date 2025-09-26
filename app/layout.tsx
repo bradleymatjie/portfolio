@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     description: "Software Engineer specializing in modern frontend development.",
     url: "https://bradleymatjie.com",
     siteName: "Bradley Matjie",
+    images: [
+      {
+        url: "https://bradleymatjie.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
