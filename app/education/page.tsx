@@ -71,7 +71,7 @@ export default function EducationAndSkills() {
     <div className="container mx-auto p-6 max-w-4xl max-h-screen overflow-y-auto">
       <header className="text-center mb-10 flex flex-col">
         <h1 className="text-4xl font-bold text-primary">Education & Skills</h1>
-        <p className="text-xl text-muted-foreground mt-2">
+        <p className="text-x text-muted-foreground mt-2">
           Equipped with Modern Tech Skills for Your Next Project
         </p>
         <div className="mt-6">

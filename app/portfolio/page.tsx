@@ -25,32 +25,34 @@ type Experience = {
 
 const experiences:Experience[] = [
   {
-    id: "consnet-epson",
-    title: "Consnet – Intermediate Full-Stack Developer",
-    subtitle: "EPSON Project | Jun 2025 – Present",
+    id: "consnet",
+    title: "Consnet | Intermediate Full-Stack Developer",
+    subtitle: "May 2025 – Present",
     description: "Leading full-stack development for the EPSON project, focusing on building robust, responsive web applications. Implemented complex API integrations for printer-related data, optimized backend logic, and delivered seamless, user-friendly interfaces using React.js and TypeScript. Collaborated with cross-functional teams to ensure scalability and performance, enhancing client workflows.",
     technologies: ["React.js", "TypeScript", "Node.js", "API Integrations"],
   },
   {
-    id: "social-banc",
-    title: "Param Solutions – Frontend Developer",
-    subtitle: "Social Banc | Jan 2024 – May 2025",
+    id: "param",
+    title: "Param Solutions | Junior Frontend Developer",
+    subtitle: "Sept 2023 – April 2025",
     description: "Developed the frontend for Social Banc, a platform for purchasing vouchers, electricity tokens, and services. Integrated secure payment systems and designed a fast, user-friendly UI with React.js and Tailwind CSS, improving user engagement and transaction efficiency.",
     technologies: ["React.js", "Tailwind CSS", "Payment APIs"],
   },
   {
-    id: "thooto",
-    title: "Param Solutions – Lead Frontend Developer",
-    subtitle: "Thooto Educational App | Aug 2024 – May 2025",
-    description: "Led frontend development for Thooto, an AI-powered educational platform enabling students to select math topics and complete dynamic quizzes. Built a highly responsive and intuitive UI using React.js and Tailwind CSS, enhancing student engagement and learning outcomes.",
-    technologies: ["React.js", "Tailwind CSS", "AI Integration"],
+    id: "fraktional",
+    title: "BiznesXpo | Software Engineer Intern",
+    subtitle: "Jan 2023 – Jul 2023",
+    description:
+      "Assisted in the development of Fraktional.dev, contributing to frontend architecture and feature implementation. Supported the launch of AI-driven branding tools, enhancing UI/UX consistency and performance. Collaborated with senior engineers and product teams to deliver scalable web applications using React.js and TypeScript.",
+    technologies: ["React.js", "TypeScript", "UI/UX", "Collaboration"],
   },
   {
-    id: "fraktional",
-    title: "Param Solutions – Lead Developer",
-    subtitle: "Fraktional.dev | Jan 2023 – Jul 2023",
-    description: "Directed technical strategy and feature implementation for Fraktional.dev, leading a cross-functional team to deliver a scalable web application. Oversaw development with React.js and TypeScript, ensuring high performance and client satisfaction.",
-    technologies: ["React.js", "TypeScript", "Team Leadership"],
+    id: "mate",
+    title: "Mate Academy | Frontend Developer Intern",
+    subtitle: "Apr 2022 – Nov 2022",
+    description:
+      "Gained hands-on experience building responsive web interfaces with React.js, JavaScript, HTML5, and CSS/SASS. Implemented reusable UI components, fixed bugs, and optimized performance. Worked in an Agile environment, collaborating with peers on feature delivery, debugging, and code reviews.",
+    technologies: ["JavaScript", "TypeScript", "HTML5", "CSS/SASS", "React.js"],
   },
 ];
 
@@ -67,7 +69,7 @@ export default function WorkExperience() {
     <div className="container p-6 max-h-screen overflow-y-auto mb-30">
       <header className="text-center mb-10 flex flex-col">
         <h1 className="text-4xl font-bold text-primary">Work Experience</h1>
-        <p className="text-xl text-muted-foreground mt-2">
+        <p className="text-md text-muted-foreground mt-2">
           Proven Full-Stack Development for Impactful Projects
         </p>
         <div className="mt-6">
@@ -79,12 +81,12 @@ export default function WorkExperience() {
         </div>
       </header>
 
-      <Separator className="my-8" />
+      <Separator className="my-7" />
 
       <section className="mb-12">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-semibold">Professional Experience</CardTitle>
+            <CardTitle className="font-semibold mt-10 text-center">Professional Experience</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

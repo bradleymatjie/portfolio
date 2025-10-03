@@ -89,7 +89,7 @@ export default function Projects() {
     <div className="projects container p-6 max-h-screen overflow-y-auto mb-30">
       <header className="text-center mb-10 flex flex-col text-gray-900">
         <h1 className="text-4xl font-bold text-primary">My Projects</h1>
-        <p className="text-xl text-muted-foreground mt-2">
+        <p className="text- text-muted-foreground mt-2">
           Showcasing Full-Stack Solutions for Real-World Impact
         </p>
         <div className="mt-6">

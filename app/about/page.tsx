@@ -17,7 +17,7 @@ export default function About() {
   return (
     <div className="container mx-auto p-6 max-w-4xl max-h-screen overflow-y-auto mb-20 lg:mb-30">
       <header className="text-center mb-10 flex flex-col">
-        <p className="text-xl text-muted-foreground mt-2">
+        <p className="text-muted-foreground mt-2">
           <u>Freelance Full-Stack Developer</u>
         </p>
         <div className="flex flex-wrap justify-center gap-4 mt-4">
@@ -30,11 +30,6 @@ export default function About() {
           <Badge variant="secondary" className="flex items-center gap-2">
             <MapPin className="h-4 w-4" /> Johannesburg, South Africa
           </Badge>
-          <Badge variant="secondary">
-            <Link href={"https://www.linkedin.com/in/bradleymatjie/"} target="_blank" className="flex items-center gap-2">
-                <Linkedin className="h-4 w-4" /> LinkedIn
-            </Link>
-          </Badge>
         </div>
       </header>
 
@@ -43,7 +38,7 @@ export default function About() {
       <section className="mb-12">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-semibold"><u>About Me</u></CardTitle>
+            <CardTitle className="text-2xl font-semibold text-center"><u>About Me</u></CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
