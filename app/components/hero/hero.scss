@@ -10,17 +10,13 @@
     @media screen and (max-width: 400px) {
         position: relative !important;
         top: -60px !important;
-        // bottom: 60px !important;
         background-size: 250% !important;
         background-position: center !important;
     }
-    
-
 
     &-text {
         height: 80%;
         width: 50%;
-        // border: 1px solid red;
         font-size: 1.5em;
         display: flex;
         flex-direction: column;
@@ -32,7 +28,6 @@
         }
 
         & p {
-
             @media screen and (max-width: 900px) {
                 text-align: center !important;
             }
@@ -49,7 +44,6 @@
                 font-size: 1.4em;
                 text-align: center;
             }
-
         }
 
         & .hero-text-buttons {
@@ -94,11 +88,11 @@
         justify-content: center;
         align-items: center;
         perspective: 1000px;
+        transform: translateY(-50px);
 
         @media screen and (max-width: 1440px) {
             display: none;
         }
-        
 
         &-1 {
             height: 80%;
@@ -106,7 +100,6 @@
             width: 100%;
             color: white;
             transform: translateZ(-100px);
-            
             z-index: 100;
             display: flex;
             flex-direction: column;
@@ -114,9 +107,9 @@
             align-items: flex-start;
             border-radius: 50% 80%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 4s ease-in-out infinite alternate;
+            animation: morphShape 4s ease-in-out infinite alternate;
 
-            @keyframes fadeIn {
+            @keyframes morphShape {
                 from { border-radius: 50% 80%; }
                 to { border-radius: 60% 50%; }
             }
@@ -136,49 +129,48 @@
     border-bottom: 1px solid white;
     transform-origin: 0 50%;
     transform: translateZ(-50px);
-    z-index: -20; // Lower z-index so it appears behind &-1 at certain points
-    animation: rotateAround 8s linear infinite; // Rotation animation
+    z-index: 150;
+    opacity: 1;
 }
-
 
 .hero-image-1-h2-two {
     position: absolute;
     bottom: 0;
     left: 50px;
     color: white;
-    transform-origin: 0 50%; // Set origin for 3D rotation
+    transform-origin: 0 50%;
     font-size: 24px;
     border-bottom: 1px solid white;
     background-color: #252525;
     padding: 10px;
     border-radius: 10px;
-
-    z-index: 20;
     transform: translateZ(-280px) rotateY(10deg) rotateX(50deg);
-    
+    z-index: 20;
+    opacity: 1;
 }
 
 .hero-image-1-h2-three {
-    position: absolute; // Position independently of &-1 for rotation
-    bottom: 75px;
+    position: absolute;
+    bottom: 95px;
     right: 50px;
     transform-origin: 100% 100%;
-    transform: translateZ(170px) rotate(30deg,-45deg); // Set origin for 3D rotation
-    font-size: 24px;
+    transform: translateZ(20px);
+    font-size: 18px;
     z-index: 200;
     border-bottom: 1px solid white;
     background-color: #252525;
     padding: 10px;
     border-radius: 10px;
     color: white;
+    opacity: 1;
 }
 
 .hero-image-1-h2-four {
-    position: absolute; // Position independently of &-1 for rotation
+    position: absolute;
     top: 45px;
     right: 20px;
     transform-origin: 100% 100%;
-    transform: translateZ(-160px) rotateY(5deg); // Set origin for 3D rotation
+    transform: translateZ(-160px) rotateY(5deg);
     font-size: 24px;
     z-index: 200;
     border-bottom: 1px solid white;
@@ -186,10 +178,10 @@
     padding: 10px;
     border-radius: 10px;
     color: white;
+    opacity: 1;
 }
 
-
-.hero  > img {
+.hero > img {
     @media screen and (max-width: 900px) {
         display: none;
     }
