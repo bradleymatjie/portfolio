@@ -55,7 +55,7 @@ export default function About() {
                 <a href="mailto:bradleysaint45@gmail.com">Hire Me</a>
               </Button>
               <Button asChild variant="outline">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+                <a href="https://www.linkedin.com/in/bradleymatjie/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
               </Button>
             </div>
           </CardContent>
