@@ -15,7 +15,7 @@ export default function Hero() {
             </h1>
             <div className="hero-text-buttons mt-4">
                 <Button asChild>
-                 <a href="mailto:bradleysaint@gmail.com" className="hire-me">
+                 <a href="https://wa.me/+27729509295?text='Hi Bradley i have a project i want to discuss with you" className="hire-me">
                         Lets talk. <ChevronRightIcon />
                     </a>
                 </Button>
