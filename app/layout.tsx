@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import { MenuProvider } from "./Context/MenuContext";
 import { Poppins, Lato } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -49,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           {children}
           <Footer />
+          <Analytics />
         </body>
       </html>
     </MenuProvider>
