@@ -66,7 +66,7 @@ export default function WorkExperience() {
   };
 
   return (
-    <div className="container p-6 max-h-screen overflow-y-auto mb-30">
+    <div className="container p-6 max-h-screen overflow-y-auto mb-30 mr-auto ml-auto">
       <header className="text-center mb-10 flex flex-col">
         <h1 className="text-4xl font-bold text-primary">Work Experience</h1>
         <p className="text-md text-muted-foreground mt-2">
