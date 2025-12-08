@@ -35,8 +35,14 @@ export default function About() {
 
       <Separator className="my-8" />
 
-      <section className="mb-12">
-        <Card>
+      <section className="mb-12 text-white">
+        <Card style={{backgroundImage:"url('/profile-pic.JPEG')", 
+          backgroundPosition:"left", 
+          backgroundSize:"cover", 
+          backgroundRepeat:"no-repeat",
+          backgroundClip:"border-box",
+          backdropFilter:"blur(20)"
+          }} className="text-white backdrop-blur-md">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-center"><u>About Me</u></CardTitle>
           </CardHeader>
@@ -54,14 +60,13 @@ export default function About() {
               <Button asChild variant="default">
                 <a href="mailto:bradleysaint45@gmail.com">Hire Me</a>
               </Button>
-              <Button asChild variant="outline">
+              <Button asChild variant="secondary">
                 <a href="https://www.linkedin.com/in/bradleymatjie/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
               </Button>
             </div>
           </CardContent>
         </Card>
       </section>
-
       <section>
         <Card>
           <CardHeader>
