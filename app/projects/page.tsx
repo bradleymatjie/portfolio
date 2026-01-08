@@ -23,11 +23,10 @@ interface Project {
   technologies: string[];
   impact: string;
   liveUrl?: string;
-  previewUrl?: string;
 }
 
 const projects: Project[] = [
-  {
+ {
     id: "mazwi-store",
     title: "Mazwi Store",
     subtitle: "Current Project | E-commerce Platform | Aug 2025 – Present",
@@ -35,7 +34,6 @@ const projects: Project[] = [
     technologies: ["React.js", "Next.js", "Tailwind CSS", "API Integrations"],
     impact: "Provided a reliable online shopping experience with competitive pricing and excellent support, fostering a growing customer base of hundreds of loyal users.",
     liveUrl: "https://mazwistore.com",
-    previewUrl: "https://via.placeholder.com/1200x800/1a1a1a/ffffff?text=Mazwi+Store+Preview", // Replace with actual screenshot
   },
   {
     id: "village-streetwear",
@@ -45,7 +43,6 @@ const projects: Project[] = [
     technologies: ["React.js", "Next.js", "Tailwind CSS", "API Integrations", "Postgres", "Node.js", "Typescript"],
     impact: "Empowered users to create and own unique streetwear styles, providing premium quality custom apparel and building a growing community of style-conscious customers in South Africa.",
     liveUrl: "https://thevillagestreetwear.com",
-    previewUrl: "https://via.placeholder.com/1200x800/1a1a1a/ffffff?text=The+Village+Streetwear+Preview", // Replace with actual screenshot
   },
 ];
 
