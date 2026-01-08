@@ -26,7 +26,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
+ {
     id: "mazwi-store",
     title: "Mazwi Store",
     subtitle: "Current Project | E-commerce Platform | Aug 2025 – Present",
@@ -35,44 +35,12 @@ const projects: Project[] = [
     impact: "Provided a reliable online shopping experience with competitive pricing and excellent support, fostering a growing customer base of hundreds of loyal users.",
   },
   {
-    id: "barber-booking",
-    title: "Barber Booking Application",
-    subtitle: "Freelance Project | 2025",
-    description: "Developed a user-friendly barber booking platform for users in Johannesburg, enabling seamless discovery and booking of nearby barbers. Implemented features like real-time barber search with ratings, appointment scheduling, and location-based filtering (e.g., barbers within 0.7km–3.1km of Bree Street, Jhb 2001). Built a responsive and intuitive UI to enhance user experience and engagement.",
-    technologies: ["React.js", "Next.js", "Tailwind CSS", "API Integrations"],
-    impact: "Simplified the process of finding and booking barbers, improving convenience for users and increasing appointment efficiency for barbers in Johannesburg.",
-  },
-  {
-    id: "epson",
-    title: "EPSON Project",
-    subtitle: "Consnet | Full-Stack Developer | Jun 2025 – Present",
-    description: "Developed a robust web application for the EPSON project, focusing on seamless API integrations for printer-related data and responsive UI design. Built scalable backend logic with Node.js and delivered user-friendly interfaces using React.js and TypeScript, enhancing client workflows and operational efficiency.",
-    technologies: ["React.js", "TypeScript", "Node.js", "API Integrations"],
-    impact: "Streamlined client operations with efficient data handling and improved user experience through responsive design.",
-  },
-  {
-    id: "social-banc",
-    title: "Social Banc",
-    subtitle: "Param Solutions | Frontend Developer | Jan 2024 – May 2025",
-    description: "Created the frontend for Social Banc, a platform enabling users to purchase vouchers, electricity tokens, and services. Integrated secure payment APIs and designed a fast, intuitive UI using React.js and Tailwind CSS, significantly improving user engagement.",
-    technologies: ["React.js", "Tailwind CSS", "Payment APIs"],
-    impact: "Increased transaction efficiency and user retention through a seamless and secure payment experience.",
-  },
-  {
-    id: "thooto",
-    title: "Thooto Educational App",
-    subtitle: "Param Solutions | Lead Frontend Developer | Aug 2024 – May 2025",
-    description: "Led the frontend development of Thooto, an AI-powered educational platform allowing students to select math topics and complete dynamic quizzes. Built a highly responsive and engaging UI with React.js and Tailwind CSS, enhancing the learning experience.",
-    technologies: ["React.js", "Tailwind CSS", "AI Integration"],
-    impact: "Improved student engagement and learning outcomes with an intuitive and interactive platform.",
-  },
-  {
-    id: "fraktional",
-    title: "Fraktional.dev",
-    subtitle: "Param Solutions | Lead Developer | Jan 2023 – Jul 2023",
-    description: "Directed the technical strategy for Fraktional.dev, leading a cross-functional team to deliver a scalable web application. Oversaw development with React.js and TypeScript, ensuring high performance and client satisfaction.",
-    technologies: ["React.js", "TypeScript", "Team Leadership"],
-    impact: "Delivered a high-performance application that met client requirements and supported business growth.",
+    id: "village-streetwear",
+    title: "The Village - Streetwear",
+    subtitle: "Personal Project | Custom Streetwear E-commerce | 2025 – Present",
+    description: "Developed thevillagestreetwear.com, a South African custom streetwear platform enabling users to design and order personalized apparel (T-shirts, hoodies, long sleeves) via an interactive design studio. Implemented on-demand printing with no minimum orders and pricing starting from R250, delivering a responsive and intuitive interface for seamless customization and purchasing.",
+    technologies: ["React.js", "Next.js", "Tailwind CSS", "API Integrations","Postgres","Node.js","Typescript"],
+    impact: "Empowered users to create and own unique streetwear styles, providing premium quality custom apparel and building a growing community of style-conscious customers in South Africa.",
   },
 ];
 
