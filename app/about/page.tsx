@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="container mx-auto p-6 max-w-4xl max-h-screen overflow-y-auto mb-20 lg:mb-30">
+    <div className="container mx-auto px-4 max-w-4xl max-h-screen overflow-y-auto mb-20 lg:mb-50">
       <header className="text-center mb-10 flex flex-col">
         <p className="text-muted-foreground mt-2">
           <u>Freelance Full-Stack Developer</u>
@@ -36,13 +36,7 @@ export default function About() {
       <Separator className="my-8" />
 
       <section className="mb-12 text-white">
-        <Card style={{backgroundImage:"url('/profile-pic.JPEG')", 
-          backgroundPosition:"left", 
-          backgroundSize:"cover", 
-          backgroundRepeat:"no-repeat",
-          backgroundClip:"border-box",
-          backdropFilter:"blur(20)"
-          }} className="text-white backdrop-blur-md">
+        <Card className="text-white backdrop-blur-md">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-center"><u>About Me</u></CardTitle>
           </CardHeader>
