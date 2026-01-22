@@ -5,6 +5,7 @@ import Header from "./components/header/header";
 import { MenuProvider } from "./Context/MenuContext";
 import { Poppins, Lato } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Footer />
           <Analytics />
+          <Toaster />
         </body>
       </html>
     </MenuProvider>

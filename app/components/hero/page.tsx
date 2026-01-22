@@ -13,17 +13,18 @@ export default function Hero() {
             <h1 className='scroll-m-20 text-2xl font-semibold tracking-tight p-2'>A human being first,<br/>
                 A Software Engineer at heart.
             </h1>
-            <div className="hero-text-buttons mt-4">
-                <Button asChild>
-                 <a href="https://wa.me/+27729509295?text='Hi Bradley i have a project i want to discuss with you" className="hire-me">
-                        Lets talk. <ChevronRightIcon />
-                    </a>
-                </Button>
+            <div className="hero-text-buttons mt-4 flex-wrap">
                 <Button variant={"outline"} asChild>
-                    <Link href={'/portfolio'} className='hire-me'>
+                    <Link href={'/projects'} className='hire-me'>
                         My work <Monitor/>
                     </Link>
                 </Button>
+                <Button variant={"secondary"} asChild>
+                    <Link href={'/pricing'} className='hire-me'>
+                        Pricing <ChevronRightIcon />
+                    </Link>
+                </Button>
+                
             </div>
         </div>
         <div className="hero-image">
