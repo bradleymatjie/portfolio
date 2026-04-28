@@ -40,24 +40,9 @@ export default function Hero() {
                             className="bg-white text-black hover:bg-white/90"
                         >
                             <Link href="/projects" className="flex items-center gap-2">
-                                View Case Studies
+                                View Projects
                                 <ArrowRight className="h-4 w-4" />
                             </Link>
-                        </Button>
-
-                        <Button
-                            asChild
-                            size="lg"
-                            variant="outline"
-                            className="border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white"
-                        >
-                            <a
-                                href="/updated_cv_bradleymatjie.pdf"
-                                className="flex items-center gap-2"
-                            >
-                                Download CV
-                                <Download className="h-4 w-4" />
-                            </a>
                         </Button>
                     </div>
 
