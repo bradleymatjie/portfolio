@@ -48,17 +48,7 @@ export default function Hero() {
 
                     {/* Links */}
                     <div className="mt-8 flex flex-wrap gap-5 text-sm text-white/60">
-                        <a
-                            href="https://www.bradleymatjie.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 transition hover:text-white"
-                        >
-                            <ExternalLink className="h-4 w-4" />
-                            Portfolio
-                        </a>
-
-                        <a
+                        <Link
                             href="https://www.linkedin.com/in/bradleymatjie"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -66,17 +56,17 @@ export default function Hero() {
                         >
                             <Linkedin className="h-4 w-4" />
                             LinkedIn
-                        </a>
+                        </Link>
 
-                        <a
-                            href="https://github.com/"
+                        <Link
+                            href="https://github.com/bradleymatjie"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 transition hover:text-white"
                         >
                             <Github className="h-4 w-4" />
                             GitHub
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
