@@ -19,37 +19,79 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Bradley Matjie",
-  keywords: ["software engineer", "React", "Next.js", "UI/UX", "frontend development"],
+  metadataBase: new URL("https://bradleymatjie.com"),
+
+  title: {
+    default: "Bradley Matjie | Full-Stack Software Engineer",
+    template: "%s | Bradley Matjie",
+  },
+
+  description:
+    "Bradley Matjie is a Johannesburg-based Full-Stack Software Engineer specializing in React, Next.js, TypeScript, APIs, AWS and modern production-ready web applications.",
+
+  keywords: [
+    "Bradley Matjie",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "Frontend Developer Johannesburg",
+    "Web Developer South Africa",
+    "Next.js South Africa",
+  ],
+
   authors: [{ name: "Bradley Matjie" }],
+  creator: "Bradley Matjie",
+  publisher: "Bradley Matjie",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   icons: {
-      icon: "/favicon.ico",
-    },
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
   openGraph: {
-    title: "Bradley Matjie",
-    description: "Software Engineer specializing in modern frontend development.",
+    type: "website",
+    locale: "en_ZA",
     url: "https://bradleymatjie.com",
     siteName: "Bradley Matjie",
+    title: "Bradley Matjie | Full-Stack Software Engineer",
+    description:
+      "Modern web applications built with React, Next.js, TypeScript and scalable technologies.",
     images: [
       {
-        url: "https://bradleymatjie.com/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
+        alt: "Bradley Matjie Portfolio",
       },
     ],
   },
+
+  category: "technology",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <MenuProvider>
       <html lang="en">
-        
-        <body className={`${poppins.variable} ${lato.variable} antialiased`}>
+        <body
+          className={`${poppins.variable} ${lato.variable} bg-[#050505] text-white antialiased`}
+        >
           <Header />
-          {children}
+          <main className="pt-20">{children}</main>
           <Analytics />
-          <Toaster />
+          <Toaster richColors position="top-right" />
         </body>
       </html>
     </MenuProvider>
