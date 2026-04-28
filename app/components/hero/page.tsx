@@ -149,7 +149,7 @@ export default function Hero() {
                             <div className="mt-5 flex flex-wrap gap-2 text-xs text-white/70">
                                 <span className="rounded-full bg-white/10 px-3 py-1">Next.js</span>
                                 <span className="rounded-full bg-white/10 px-3 py-1">Responsive</span>
-                                <span className="rounded-full bg-white/10 px-3 py-1">Lead Gen</span>
+                                <span className="rounded-full bg-white/10 px-3 py-1">Tailwind</span>
                             </div>
                         </div>
                     </div>
