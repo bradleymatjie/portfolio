@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Bradley Matjie",
     images: [
       {
-        url: "https://bradleymatjie.com/og-image.jpg",
+        url: "https://bradleymatjie.com/og-image.png",
         width: 1200,
         height: 630,
       },
