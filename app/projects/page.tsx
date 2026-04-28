@@ -1,151 +1,157 @@
-"use client"
-import "./projects.scss"
-import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
+"use client";
+
+import Link from "next/link";
+import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
-  DrawerFooter,
-} from "@/components/ui/drawer";
-import { Mail, ExternalLink } from "lucide-react";
 
-interface Project {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  technologies: string[];
-  impact: string;
-  liveUrl?: string;
-}
-
-const projects: Project[] = [
- {
-    id: "mazwi-store",
+const projects = [
+  {
+    title: "ApointMe",
+    category: "Booking Platform",
+    description:
+      "Location-based booking marketplace for barbers, salons, nail techs and beauty professionals.",
+    stack: ["Next.js", "Supabase", "OneSignal", "Payments"],
+    href: "/projects/apointme",
+    liveUrl: "https://www.apointme.co.za",
+  },
+  {
     title: "Mazwi Store",
-    subtitle: "Current Project | E-commerce Platform | Aug 2025 – Present",
-    description: "Leading the development of Mazwi Store (mazwistore.com), an e-commerce platform specializing in premium tech products. Implemented features for fast order processing, secure payments, and a brand ambassador program targeting university students. Focused on creating a responsive and user-friendly interface to enhance customer engagement and satisfaction.",
-    technologies: ["React.js", "Next.js", "Tailwind CSS", "API Integrations"],
-    impact: "Provided a reliable online shopping experience with competitive pricing and excellent support, fostering a growing customer base of hundreds of loyal users.",
+    category: "E-commerce",
+    description:
+      "iPhone reseller platform with variants, checkout, admin tools and returns workflow.",
+    stack: ["Next.js", "Supabase", "Resend", "Dashboard"],
+    href: "/projects/mazwi-store",
     liveUrl: "https://mazwistore.com",
   },
   {
-    id: "village-streetwear",
-    title: "The Village - Streetwear",
-    subtitle: "Personal Project | Custom Streetwear E-commerce | 2025 – Present",
-    description: "Developed thevillagestreetwear.com, a South African custom streetwear platform enabling users to design and order personalized apparel (T-shirts, hoodies, long sleeves) via an interactive design studio. Implemented on-demand printing with no minimum orders and pricing starting from R250, delivering a responsive and intuitive interface for seamless customization and purchasing.",
-    technologies: ["React.js", "Next.js", "Tailwind CSS", "API Integrations", "Postgres", "Node.js", "Typescript"],
-    impact: "Empowered users to create and own unique streetwear styles, providing premium quality custom apparel and building a growing community of style-conscious customers in South Africa.",
+    title: "The Village",
+    category: "Marketplace",
+    description:
+      "Streetwear marketplace concept for local brands with seller dashboards, orders and earnings.",
+    stack: ["Next.js", "Marketplace", "Orders", "E-commerce"],
+    href: "/projects/the-village",
     liveUrl: "https://thevillagestreetwear.com",
+  },
+   {
+    title: "LS Printings",
+    category: "Business Website",
+    description:
+      "Premium printing and branding website designed to generate leads, showcase services and convert visitors into paying customers.",
+    stack: ["Next.js", "UI Design", "Lead Generation", "Responsive"],
+    href: "/projects/ls-printings",
+    liveUrl: "https://lsprintings.com",
   },
 ];
 
-export default function Projects() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const handleCardClick = (project: Project) => {
-    setSelectedProject(project);
-    setIsDrawerOpen(true);
-  };
-
+export default function ProjectsPage() {
   return (
-    <div className="projects container p-6 max-h-screen overflow-y-auto mb-30 mr-auto ml-auto">
-      <header className="text-center mb-10 flex flex-col text-gray-900">
-        <h1 className="text-4xl font-bold text-primary">My Projects</h1>
-        <p className="text- text-muted-foreground mt-2">
-          Showcasing Full-Stack Solutions for Real-World Impact
-        </p>
-        <div className="mt-6">
-          <Button asChild>
-            <a href="mailto:bradleysaint45@gmail.com" className="flex items-center gap-2">
-              <Mail className="h-4 w-4" /> Start Your Project
-            </a>
-          </Button>
-        </div>
-      </header>
-      <Separator className="my-8" />
-      <section className="mb-12 cards-projects">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold">Featured Projects</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 cards-list">
-              {projects.map((project) => (
-                <Card
-                  key={project.id}
-                  className="cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-300"
-                  onClick={() => handleCardClick(project)}
-                >
-                  <CardHeader>
-                    <CardTitle className="text-lg font-semibold">{project.title}</CardTitle>
-                    <p className="text-sm text-muted-foreground">{project.subtitle}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="outline">{tech}</Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+    <main className="relative min-h-screen overflow-hidden bg-[#050505] px-4 py-28 text-white sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.13),transparent_35%)]" />
+
+      <div className="relative mx-auto max-w-7xl">
+        <section className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <div className="mb-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 backdrop-blur">
+              Selected Work
             </div>
-          </CardContent>
-        </Card>
-      </section>
-      <section className="text-center">
-        <p className="text-muted-foreground mb-4">
-          Ready to create your next big project? Let’s build something extraordinary together!
-        </p>
-        <Button asChild variant="default">
-          <a href="mailto:bradleysaint45@gmail.com" className="flex items-center gap-2">
-            <Mail className="h-4 w-4" /> Contact Me for Freelance Projects
-          </a>
-        </Button>
-      </section>
-      <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-        <DrawerContent>
-          {selectedProject && (
-            <>
-              <DrawerHeader>
-                <DrawerTitle>{selectedProject.title}</DrawerTitle>
-                <DrawerDescription>{selectedProject.subtitle}</DrawerDescription>
-              </DrawerHeader>
-              <div className="p-6 overflow-y-auto">
-                <p className="text-muted-foreground mb-4">{selectedProject.description}</p>
-                <h3 className="text-lg font-semibold mb-2">Impact</h3>
-                <p className="text-muted-foreground mb-4">{selectedProject.impact}</p>
-                <h3 className="text-lg font-semibold mb-2">Technologies</h3>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {selectedProject.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary">{tech}</Badge>
+
+            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+              Real products, built for real users.
+            </h1>
+          </div>
+
+          <p className="max-w-2xl text-base leading-8 text-white/60 sm:text-lg lg:justify-self-end">
+            A collection of platforms, marketplaces, dashboards and business
+            tools I’ve built or contributed to using modern full-stack
+            technologies.
+          </p>
+        </section>
+
+        <section className="mt-16 grid gap-5 md:grid-cols-2">
+          {projects.map((project, index) => (
+            <article
+              key={project.title}
+              className="group relative min-h-[330px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07] sm:p-8"
+            >
+              <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full bg-blue-500/10 blur-3xl transition group-hover:bg-blue-500/20" />
+              <div className="absolute -bottom-16 -left-16 h-52 w-52 rounded-full bg-amber-500/10 blur-3xl transition group-hover:bg-amber-500/15" />
+
+              <div className="relative flex h-full flex-col">
+                <div className="flex items-start justify-between gap-5">
+                  <div>
+                    <p className="text-sm text-white/45">{project.category}</p>
+                    <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                      {project.title}
+                    </h2>
+                  </div>
+
+                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/40">
+                    0{index + 1}
+                  </span>
+                </div>
+
+                <p className="mt-5 max-w-xl text-sm leading-7 text-white/60 sm:text-base">
+                  {project.description}
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/70"
+                    >
+                      {item}
+                    </span>
                   ))}
                 </div>
+
+                <div className="mt-auto flex flex-wrap gap-3 pt-8">
+                
+
+                  {project.liveUrl && (
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+                    >
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        Live Site
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </div>
-              <DrawerFooter className="flex flex-row justify-center gap-4">
-                {selectedProject.liveUrl && (
-                  <Button asChild>
-                    <a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      <ExternalLink className="h-4 w-4" /> View Live Site
-                    </a>
-                  </Button>
-                )}
-                <Button variant="outline" onClick={() => setIsDrawerOpen(false)}>
-                  Close
-                </Button>
-              </DrawerFooter>
-            </>
-          )}
-        </DrawerContent>
-      </Drawer>
-    </div>
+            </article>
+          ))}
+        </section>
+
+        <section className="mt-20 rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 text-center shadow-2xl backdrop-blur-xl sm:p-10">
+          <Github className="mx-auto h-6 w-6 text-white/60" />
+
+          <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
+            Clean UI, strong structure, production-ready delivery.
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-white/60">
+            I focus on building digital products that feel polished, perform
+            well and solve real business problems.
+          </p>
+
+          <Button
+            asChild
+            size="lg"
+            className="mt-8 bg-white text-black hover:bg-white/90"
+          >
+            <Link href="/contact">Start a Project</Link>
+          </Button>
+        </section>
+      </div>
+    </main>
   );
 }

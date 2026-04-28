@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import { MenuProvider } from "./Context/MenuContext";
 import { Poppins, Lato } from "next/font/google";
@@ -49,7 +48,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body className={`${poppins.variable} ${lato.variable} antialiased`}>
           <Header />
           {children}
-          <Footer />
           <Analytics />
           <Toaster />
         </body>
