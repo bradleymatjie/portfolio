@@ -1,162 +1,153 @@
-"use client"
+"use client";
 
-import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
-  DrawerFooter,
-} from "@/components/ui/drawer";
-import { Mail } from "lucide-react";
+import { GraduationCap, Code2, Award, Sparkles } from "lucide-react";
 
-interface Education {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-}
-
-const educationList: Education[] = [
+const education = [
   {
-    id: "national-certificate",
-    title: "National Certificate in Information Technology",
-    subtitle: "Camblish Training Institute, Johannesburg | Apr 2023 – Sep 2024",
-    description: "Completed a comprehensive program in Information Technology, gaining foundational knowledge in software development, system analysis, and IT project management. Focused on practical skills in programming, database management, and web development, preparing me for real-world application development challenges.",
+    title: "National Certificate: Information Technology",
+    school: "Camblish Training Institute",
+    period: "2023 – 2024",
+    desc: "Focused on software development, systems thinking, databases and practical IT skills for real-world delivery.",
   },
   {
-    id: "software-development",
-    title: "Certificate in Software Development",
-    subtitle: "ZAIO, Johannesburg | Apr 2023 – Mar 2024",
-    description: "Acquired in-depth expertise in software development through hands-on training in modern JavaScript frameworks, TypeScript, and UI/UX design principles. Developed multiple projects using React.js and Next.js, emphasizing scalable and responsive web applications.",
+    title: "Web Development Program",
+    school: "Mate Academy",
+    period: "2022",
+    desc: "Hands-on training in modern frontend development using React, JavaScript and professional development workflows.",
   },
 ];
 
-const skills: string[] = [
-  "JavaScript (ES6+)",
-  "TypeScript",
-  "HTML5",
-  "CSS3",
-  "SASS",
+const skills = [
   "React.js",
   "Next.js",
-  "React Native",
+  "TypeScript",
+  "JavaScript",
+  "Node.js",
   "Tailwind CSS",
+  "HTML5",
+  "CSS3",
+  "SCSS",
+  "Supabase",
+  "PostgreSQL",
+  "AWS",
+  "REST APIs",
   "Git",
   "GitHub",
-  "Figma",
-  "Framer",
-  "Shell",
-  "UI/UX Design",
-  "Responsive Web Design",
-  "API Integration",
-  "Agile Development",
+  "Jira",
+  "Magento",
+  "WordPress",
+  "Agility CMS",
+  "Responsive Design",
 ];
 
-export default function EducationAndSkills() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
-  const [selectedEducation, setSelectedEducation] = useState<Education | null>(null);
-
-  const handleCardClick = (education: Education) => {
-    setSelectedEducation(education);
-    setIsDrawerOpen(true);
-  };
-
+export default function EducationSkillsPage() {
   return (
-    <div className="container mx-auto p-6 max-w-4xl max-h-screen overflow-y-auto">
-      <header className="text-center mb-10 flex flex-col">
-        <h1 className="text-4xl font-bold text-primary">Education & Skills</h1>
-        <p className="text-x text-muted-foreground mt-2">
-          Equipped with Modern Tech Skills for Your Next Project
-        </p>
-        <div className="mt-6">
-          <Button asChild>
-            <a href="mailto:bradleysaint45@gmail.com" className="flex items-center gap-2">
-              <Mail className="h-4 w-4" /> Get in Touch
-            </a>
-          </Button>
-        </div>
-      </header>
+    <main className="relative min-h-screen overflow-hidden bg-[#050505] px-4 py-28 text-white sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.13),transparent_35%)]" />
 
-      <Separator className="my-8" />
-
-      <section className="mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold">Education</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {educationList.map((education) => (
-                <Card
-                  key={education.id}
-                  className="cursor-pointer hover:shadow-lg transition-shadow"
-                  onClick={() => handleCardClick(education)}
-                >
-                  <CardHeader>
-                    <CardTitle className="text-lg font-semibold">{education.title}</CardTitle>
-                    <p className="text-sm text-muted-foreground">{education.subtitle}</p>
-                  </CardHeader>
-                </Card>
-              ))}
+      <div className="relative mx-auto max-w-7xl">
+        {/* Hero */}
+        <section className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <div className="mb-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 backdrop-blur">
+              Education & Skills
             </div>
-          </CardContent>
-        </Card>
-      </section>
 
-      <Separator className="my-8" />
+            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+              Built on learning. Proven through execution.
+            </h1>
+          </div>
 
-      <section className="mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold">Skills</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-2">
+          <p className="max-w-2xl text-base leading-8 text-white/60 sm:text-lg lg:justify-self-end">
+            Strong technical foundations combined with hands-on commercial
+            experience building real products, platforms and business solutions.
+          </p>
+        </section>
+
+        {/* Education */}
+        <section className="mt-16">
+          <div className="mb-6 flex items-center gap-3">
+            <GraduationCap className="h-5 w-5 text-white/70" />
+            <h2 className="text-3xl font-semibold">Education</h2>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {education.map((item, index) => (
+              <article
+                key={item.title}
+                className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07]"
+              >
+                <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full bg-blue-500/10 blur-3xl" />
+
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/40">
+                  0{index + 1}
+                </span>
+
+                <h3 className="mt-5 text-2xl font-semibold text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-2 text-white/70">{item.school}</p>
+
+                <p className="mt-2 text-sm text-white/45">{item.period}</p>
+
+                <p className="mt-5 leading-8 text-white/60">{item.desc}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section className="mt-20">
+          <div className="mb-6 flex items-center gap-3">
+            <Code2 className="h-5 w-5 text-white/70" />
+            <h2 className="text-3xl font-semibold">Core Skills</h2>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl backdrop-blur-xl sm:p-8">
+            <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (
-                <Badge key={skill} variant="secondary">{skill}</Badge>
+                <span
+                  key={skill}
+                  className="rounded-full bg-white/10 px-4 py-2 text-sm text-white/75"
+                >
+                  {skill}
+                </span>
               ))}
             </div>
-          </CardContent>
-        </Card>
-      </section>
+          </div>
+        </section>
 
-      <section className="text-center">
-        <p className="text-muted-foreground mb-4">
-          Ready to leverage my skills for your project? Let’s build something extraordinary together!
-        </p>
-        <Button asChild variant="default">
-          <a href="mailto:bradleysaint45@gmail.com" className="flex items-center gap-2">
-            <Mail className="h-4 w-4" /> Contact Me for Freelance Projects
-          </a>
-        </Button>
-      </section>
+        {/* Strengths */}
+        <section className="mt-20 grid gap-5 md:grid-cols-3">
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-xl">
+            <Award className="h-5 w-5 text-white/70" />
+            <h3 className="mt-4 text-xl font-semibold">Fast Learner</h3>
+            <p className="mt-3 leading-7 text-white/60">
+              Quickly adapt to new tools, business domains and engineering
+              environments.
+            </p>
+          </div>
 
-      <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-        <DrawerContent>
-          {selectedEducation && (
-            <>
-              <DrawerHeader>
-                <DrawerTitle>{selectedEducation.title}</DrawerTitle>
-                <DrawerDescription>{selectedEducation.subtitle}</DrawerDescription>
-              </DrawerHeader>
-              <div className="p-6">
-                <p className="text-muted-foreground">{selectedEducation.description}</p>
-              </div>
-              <DrawerFooter>
-                <Button variant="outline" onClick={() => setIsDrawerOpen(false)}>
-                  Close
-                </Button>
-              </DrawerFooter>
-            </>
-          )}
-        </DrawerContent>
-      </Drawer>
-    </div>
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-xl">
+            <Sparkles className="h-5 w-5 text-white/70" />
+            <h3 className="mt-4 text-xl font-semibold">Ownership Mindset</h3>
+            <p className="mt-3 leading-7 text-white/60">
+              I focus on solving problems, shipping outcomes and improving the
+              final product.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-xl">
+            <Code2 className="h-5 w-5 text-white/70" />
+            <h3 className="mt-4 text-xl font-semibold">Business Focused</h3>
+            <p className="mt-3 leading-7 text-white/60">
+              I build software that supports growth, conversions, efficiency and
+              user satisfaction.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }
