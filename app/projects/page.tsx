@@ -95,7 +95,7 @@ export default function ProjectsPage() {
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {project.stack.map((item) => (
+                  {project.stack?.map((item) => (
                     <span
                       key={item}
                       className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/70"
