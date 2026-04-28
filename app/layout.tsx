@@ -9,13 +9,13 @@ import { Toaster } from "@/components/ui/sonner";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // adjust weights as needed
+  weight: ["400", "500", "600", "700"],
 });
 
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["400", "700"], // adjust weights as needed
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
