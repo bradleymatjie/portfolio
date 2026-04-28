@@ -52,7 +52,7 @@ export default function Hero() {
                             className="border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white"
                         >
                             <a
-                                href="/Bradley-Matjie-CV.pdf"
+                                href="/updated_cv_bradleymatjie.pdf"
                                 className="flex items-center gap-2"
                             >
                                 Download CV
