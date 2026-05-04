@@ -23,7 +23,7 @@ const plans = [
   {
     name: "Professional",
     price: "R10,000",
-    subtitle: "per project",
+    subtitle: "R10,000 + optional monthly",
     description: "Best for brands that need a polished multi-page website.",
     features: [
       "Multi-page website",
@@ -32,7 +32,7 @@ const plans = [
       "Performance optimization",
       "Deployment support",
       "Basic analytics setup",
-      "R1,500/month – Hosting, server & maintenance",
+      "Managed hosting,Priority support & maintenance – R1,500/month",
     ],
     popular: true,
     button: "Start project",
@@ -49,6 +49,8 @@ const plans = [
       "Database setup",
       "Ongoing support options",
       "Custom requirements",
+      "Priority support & updates",
+     "Managed hosting, maintenance & priority support – custom pricing",
     ],
     popular: false,
     button: "Contact me",
@@ -143,17 +145,34 @@ export default function PricingPage() {
             </article>
           ))}
         </section>
+<section className="mt-16 rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 text-center shadow-2xl backdrop-blur-xl">
+  <h2 className="text-2xl font-semibold">
+    Not sure which package fits?
+  </h2>
 
-        <section className="mt-16 rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 text-center shadow-2xl backdrop-blur-xl">
-          <h2 className="text-2xl font-semibold">
-            Not sure which package fits?
-          </h2>
+  <p className="mx-auto mt-3 max-w-2xl leading-8 text-white/60">
+    Send me your idea, website reference or business goal and I’ll
+    recommend the best direction.
+  </p>
 
-          <p className="mx-auto mt-3 max-w-2xl leading-8 text-white/60">
-            Send me your idea, website reference or business goal and I’ll
-            recommend the best direction.
-          </p>
-        </section>
+  {/* CTA Buttons */}
+  <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+    <a
+      href="https://wa.me/27658145269?text=Hi%20Bradley%2C%20I%20want%20to%20start%20a%20project."
+      target="_blank"
+      className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-[#D90429] hover:text-white"
+    >
+      Chat on WhatsApp
+    </a>
+
+    <a
+      href="/contact"
+      className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:scale-105 hover:bg-white/10"
+    >
+      Contact Me
+    </a>
+  </div>
+</section>
 
         <PricingDrawer open={open} onOpenChange={setOpen} plan={selectedPlan} />
       </div>
