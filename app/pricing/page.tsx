@@ -32,6 +32,7 @@ const plans = [
       "Performance optimization",
       "Deployment support",
       "Basic analytics setup",
+      "R1,500/month – Hosting, server & maintenance",
     ],
     popular: true,
     button: "Start project",
