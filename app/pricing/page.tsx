@@ -158,7 +158,7 @@ export default function PricingPage() {
   {/* CTA Buttons */}
   <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
     <a
-      href="https://wa.me/27658145269?text=Hi%20Bradley%2C%20I%20want%20to%20start%20a%20project."
+      href="https://wa.me/+27729509295?text=Hi%20Bradley%2C%20I%20want%20to%20start%20a%20project."
       target="_blank"
       className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-[#D90429] hover:text-white"
     >
