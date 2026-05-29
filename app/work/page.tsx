@@ -23,7 +23,7 @@ const experiences = [
   {
     role: "Software engineer",
     company: "Param Solutions",
-    period: "2023 – 2025",
+    period: "2023 Sept – 2025 April",
     location: "Remote / Hybrid",
     description:
       "Led frontend development for a complex platform using React, Next.js and TypeScript, with integrations across vouchers, payments, utilities and e-commerce workflows.",
