@@ -21,9 +21,9 @@ const experiences = [
     stack: ["Next.js", "React", "TypeScript", "REST APIs", "AWS"],
   },
   {
-    role: "Lead Frontend Developer",
-    company: "Thooto / Param Solutions",
-    period: "2024 – 2025",
+    role: "Software engineer",
+    company: "Param Solutions",
+    period: "2023 – 2025",
     location: "Remote / Hybrid",
     description:
       "Led frontend development for a complex platform using React, Next.js and TypeScript, with integrations across vouchers, payments, utilities and e-commerce workflows.",
