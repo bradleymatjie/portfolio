@@ -8,7 +8,7 @@ const experiences = [
   {
     role: "Intermediate Full-Stack Software Engineer",
     company: "Consnet (Pty) Ltd",
-    period: "2025 – Present",
+    period: "2025 May – Present",
     location: "Johannesburg",
     description:
       "Developing production-grade web applications using Next.js, React and TypeScript, while working across APIs, dashboards, internal systems and cloud-based integrations.",
