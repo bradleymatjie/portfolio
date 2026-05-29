@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import {
-    ArrowRight,
     Github,
     Linkedin,
     Mail,
@@ -10,7 +8,6 @@ import {
     MessageCircle,
     Phone,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
     const email = "bradleysaint45@gmail.com";

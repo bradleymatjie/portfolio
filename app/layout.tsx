@@ -2,21 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/header/header";
 import { MenuProvider } from "./Context/MenuContext";
-import { Poppins, Lato } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/sonner";
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const lato = Lato({
-  variable: "--font-lato",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bradleymatjie.com"),
@@ -85,11 +72,9 @@ export default function RootLayout({
   return (
     <MenuProvider>
       <html lang="en">
-        <body
-          className={`${poppins.variable} ${lato.variable} bg-[#050505] text-white antialiased`}
-        >
+        <body className="bg-[#f8f4ee] text-black antialiased">
           <Header />
-          <main className="pt-20">{children}</main>
+          <main>{children}</main>
           <Analytics />
           <Toaster richColors position="top-right" />
         </body>
