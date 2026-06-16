@@ -6,6 +6,22 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+  title: "MyMashankura",
+  category: "Personal Finance",
+  description:
+  "Personal finance platform with budgeting, spending insights, investment tracking and Capitec statement imports that automatically extract and categorize transactions.",
+  stack: [
+    "Next.js",
+    "TypeScript",
+    "PWA",
+    "Finance",
+    "Statement Imports",
+    "Analytics",
+  ],
+  href: "/projects/mymashankura",
+  liveUrl: "https://mymashankura.com",
+},
+  {
     title: "ApointMe",
     category: "Booking Platform",
     description:
